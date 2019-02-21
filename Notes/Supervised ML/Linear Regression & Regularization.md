@@ -1,4 +1,4 @@
-# Supervised ML
+# Linear Regression & Regularization - Supervised ML
 
 ### 1. Least Squares
 - Tries to fit a line such that the sum of square of the residuals on the training data is the minimum
