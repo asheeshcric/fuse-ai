@@ -22,3 +22,13 @@
 - The big difference between **Ridge** and **Lasso** regression is that Ridge regression can only shrink the slope asymptotically close to 0 while Lasso regression can shrink the slope all the way to 0
 	- Hence, **Lasso Regression** is better at removing insignificant features from the dataset that have less influence to the predicted outcome
 - In summary, Ridge regression tends to do a little better than Lasso regression when most of the features in the dataset are useful. But **Lasso** is preferrable in cases where there can be useless variables in the model's equation
+
+### 4. Elastic Net Regression
+- When the number of features in your dataset is huge (in 1000s or millions), there is no possible way to determine if all the variables are useful or not and hence it is difficult to decide which regression technique to choose among **Ridge** & **Lasso**
+- In such case, we use a hybrid technique called **Elastic Net Regression** which is good at dealing with situations when there are correlations between parameters
+	- `metric = sum(square of residuals) + sum(lambda_1 * abs(slope)) + sum(lambda_2 * square(slope))`
+	- When `lambda_1 > 0 & lambda_2 = 0` ==> Lasso Regression
+	- When `lambda_1 = 0 & lambda_2 > 0` ==> Ridge Regression
+	- When `lambda_1 = 0 & lambda_2 = 0` ==> Least Squares Regression 
+- Elastic Net regression combines the lasso regression penalty with the ridge regression penalty and gets the best of both worlds
+- It also does a better job dealing with correlated parameters
